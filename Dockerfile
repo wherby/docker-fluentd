@@ -60,6 +60,7 @@ RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
         fluent-plugin-viaq_data_model \
         fluent-plugin-collectd-nest \
         fluent-plugin-in-kinesis \
+        aws-sdk-core \
     && \
     yum -y history undo last \
     && \
