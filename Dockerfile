@@ -61,7 +61,7 @@ RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
         fluent-plugin-collectd-nest \
         fluent-plugin-in-kinesis \
         fluent-plugin-influxdb \
-        fluent-plugin-record-modifier \
+        fluent-plugin-filter_typecast \
         aws-sdk-core \
     && \
     yum -y history undo last \
