@@ -95,8 +95,8 @@ find /etc/fluent -name \*.conf -exec sed -i \
      {} \;
 
 # Switch to Ruby 2.2
-if [ -n "${RUBY_SCL_VER:-}" ] ; then
-    scl enable $RUBY_SCL_VER bash
-fi
+# if [ -n "${RUBY_SCL_VER:-}" ] ; then
+#     scl enable $RUBY_SCL_VER bash
+# fi
 
-fluentd ${FLUENTD_ARGS}
+scl enable $RUBY_SCL_VER "fluentd ${FLUENTD_ARGS}"
