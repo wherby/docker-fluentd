@@ -16,6 +16,7 @@ ENV HOME=/opt/app-root/src \
     FLUENTD_VERSION=0.12.31 \
     GEM_HOME=/opt/app-root/src \
     SYSLOG_LISTEN_PORT=10514 \
+    RUBY_SCL_VER=rh-ruby22 \
     RUBYLIB=/opt/app-root/src/amqp_qpid/lib \
     RUBYVERREPOPKGS="centos-release-scl" \
     RUBYVERPKGS="rh-ruby22 scl-utils"
@@ -46,7 +47,7 @@ RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     yum install -y --setopt=tsflags=nodocs --setopt=history_record=yes \
         gcc-c++ ruby-devel libcurl-devel make cmake swig \
     && \
-    gem install -N --conservative --minimal-deps \
+    scl enable $RUBY_SCL_VER "gem install -N --conservative --minimal-deps \
         fluentd:${FLUENTD_VERSION} \
         'activesupport:<5' \
         fluent-plugin-elasticsearch \
@@ -64,7 +65,7 @@ RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
         fluent-plugin-filter_typecast \
         fluent-plugin-grep \
         fluent-plugin-kafka \
-        aws-sdk-core \
+        aws-sdk-core" \
     && \
     yum -y history undo last \
     && \
