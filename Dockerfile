@@ -12,11 +12,10 @@ EXPOSE 24230
 
 ENV HOME=/opt/app-root/src \
     PATH=/opt/app-root/src/bin:/opt/app-root/bin:$PATH \
-    RUBY_VERSION=2.0 \
+    RUBY_VERSION=2.2 \
     FLUENTD_VERSION=0.12.31 \
     GEM_HOME=/opt/app-root/src \
     SYSLOG_LISTEN_PORT=10514 \
-    RUBY_SCL_VER=rh-ruby22 \
     RUBYLIB=/opt/app-root/src/amqp_qpid/lib \
     RUBYVERREPOPKGS="centos-release-scl" \
     RUBYVERPKGS="rh-ruby22 scl-utils"
