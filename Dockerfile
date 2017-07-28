@@ -19,7 +19,7 @@ ENV HOME=/opt/app-root/src \
     RUBY_SCL_VER=rh-ruby22 \
     RUBYLIB=/opt/app-root/src/amqp_qpid/lib \
     RUBYVERREPOPKGS="centos-release-scl" \
-    RUBYVERPKGS="rh-ruby22 scl-utils"
+    RUBYVERPKGS="rh-ruby22 rh-ruby22-ruby-devel scl-utils"
 
 # use docker ... -e RUBY_SCL_VER=rh-ruby22 to use ruby 2.2
 
