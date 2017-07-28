@@ -16,6 +16,7 @@ ENV HOME=/opt/app-root/src \
     FLUENTD_VERSION=0.12.31 \
     GEM_HOME=/opt/app-root/src \
     SYSLOG_LISTEN_PORT=10514 \
+    LD_LIBRARY_PATH=/opt/rh/rh-ruby22/root/usr/lib64 \
     RUBY_SCL_VER=rh-ruby22 \
     RUBYLIB=/opt/app-root/src/amqp_qpid/lib \
     RUBYVERREPOPKGS="centos-release-scl" \
